@@ -1,8 +1,7 @@
 import "./Employee.css";
+import EmployeeDate from "../SplitingComponents/EmployeeDate";
 
 function Employee(props) {
-
-
   return (
     <div className="wrapper">
       <h2>Heading 1</h2>
@@ -13,7 +12,7 @@ function Employee(props) {
       <div>{props.age}</div>
       <hr></hr>
       <div>Joining Date</div>
-      <div>{props.joiningDate.toDateString()}</div>
+      <EmployeeDate empDate={props.joiningDate} />
     </div>
   );
 }
